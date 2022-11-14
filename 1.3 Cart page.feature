@@ -39,17 +39,17 @@ Scenario: 1.3.3 User should be able to continue shopping after adding goods into
     When user clicks “Continue shopping” button
     Then user should be redirected to "Inventory" page
 
-@Smoke   
+@Smoke                                       
 Scenario: 1.3.4 User should be redirected to the "Checkout information" page
-    Given user went to "Cart" page
-    When user clicks “Checkout” button
+    Given user went to "Cart" page           
+    When user clicks “Checkout” button       
     Then user should be redirected to “Checkout information" page
     And following elements should be displayed on the page
-        | control name    | control type |
-        | First name      | input        |
-        | Last name       | input        |
-        | Zip/Postal Code | input        |
-        | Cancel          | button       |
-        | Continue        | button       |
+        | control name    | control type |   
+        | First name      | input        |   
+        | Last name       | input        |   
+        | Zip/Postal Code | input        |   
+        | Cancel          | button       |   
+        | Continue        | button       |   
     
    
