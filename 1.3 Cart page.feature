@@ -44,10 +44,12 @@ Scenario: 1.3.4 User should be redirected to the "Checkout information" page
     Given user went to "Cart" page                                                                       
     When user clicks “Checkout” button                                                                   
     Then user should be redirected to “Checkout information" page                                        
-    And following elements should be displayed on the page:
+    And the following elements should be on “Checkout information" page:
         | control name    | control type |
         | First name      | input        |
         | Last name       | input        |
         | Zip/Postal Code | input        |
         | Cancel          | button       |
-        | Continue        | button       |                                                               
+        | Continue        | button       |
+        
+                                                           
