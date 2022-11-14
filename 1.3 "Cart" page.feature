@@ -82,3 +82,5 @@ Feature: 1.3 "Cart" page
         And list of items is displayed
         And user clicks on "CHECKOUT" button
         Then user should be redirected to "Checkout information" page
+
+

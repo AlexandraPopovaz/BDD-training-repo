@@ -30,4 +30,3 @@ Feature: 2.4.2.4 Simple example
 
 	@Smoke
 	Scenario Outline: 2.4.2.4_04 Validation of the "Name" input
-when
