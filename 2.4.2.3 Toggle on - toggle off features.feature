@@ -143,4 +143,4 @@ Scenario: 2.4.2.3_07 Changes in Features should be saved after refreshing the pa
 		| Feature1 | hide   |
 		| Feature4 | hide   |
 		| Feature3 | show   |
-		| Feature2 | hide   |opened user opened user opened inputuser opened user 
+		| Feature2 | hide   |
