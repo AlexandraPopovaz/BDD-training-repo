@@ -2,6 +2,7 @@ Feature: 1.1 Sign in to the App
 
     Background: 
         Given application URL is opened
+        
     Scenario: 1.1_01 Standard user  should be able to sign in into the application
         Given user entered "standard_user" into 'Username' input
         And user entered "secret_sauce" into 'Password' input 
