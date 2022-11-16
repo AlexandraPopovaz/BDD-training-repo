@@ -28,6 +28,3 @@ Examples:
 
   # (empty) - user left the text field empty
   # (invalid input) - any input except 'secret_sauce'                                                                                                                  
-
-
-
