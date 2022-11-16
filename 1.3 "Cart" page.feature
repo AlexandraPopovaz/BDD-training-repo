@@ -1,7 +1,7 @@
 Feature: 1.3 "Cart" page
     Background:
-        Given https://www.saucedemo.com/ is opened
-        And user is signed in as Standard User
+        Given https://www.saucedemo.com/ was opened
+        And user signed in as Standard User
 
     Scenario Outline: 1.3.1 The user should be able to add one/several items into the Cart
         Given "Inventory" page was opened
@@ -32,7 +32,7 @@ Feature: 1.3 "Cart" page
 
     Scenario Outline: 1.3.3 The user should be able to remove one/several items from the Cart on "Inventory" page
         Given "Inventory" page was opened
-        And user added <number> items by clicking "ADD TO CART" button
+        And user added <number> items by clicking on "ADD TO CART" button
         And clicked "ADD TO CART" buttons were changed to "REMOVE" buttons
         When user clicks on "REMOVE" button on <number> item cards
         Then <number> items should be removed from the Cart
