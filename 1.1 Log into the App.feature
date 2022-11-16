@@ -54,7 +54,7 @@ Examples:
 
 @smoke
 Scenario Outline: 1.1_06 Signing into the App with invalid "Password"
-    Given user entered any of "Accepted usernames" into the "Username" input
+        Given user entered any of "Accepted usernames" into the "Username" input
 	And user entered <password> into "Password" input
 	When user clicks on the "Login" button
 	Then "Login" page should remain opened
