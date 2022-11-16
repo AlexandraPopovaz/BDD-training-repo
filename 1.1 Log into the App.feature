@@ -37,7 +37,7 @@ Scenario: 1.1_04 Signing into the App with "performance_glitch_user" account
 	Then after a few seconds "Inventory" page should open
 	And products with appropriate photos (relevant to the product name) should be displayed
 
-@smoke
+@regression
 Scenario Outline: 1.1_05 Signing into the App with invalid "Username"
 	Given user entered <username> into the "Username" input
 	And user entered "secret_sauce" into "Password" input
@@ -52,7 +52,7 @@ Examples:
 	| Any username other than "Accepted usernames" | "Username and password do not match any user in this service" |
 	| empty                                        | "Username is required"                                        |
 
-@smoke
+@regression
 Scenario Outline: 1.1_06 Signing into the App with invalid "Password"
         Given user entered any of "Accepted usernames" into the "Username" input
 	And user entered <password> into "Password" input
