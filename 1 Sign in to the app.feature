@@ -16,7 +16,7 @@ Scenario: 1.1 'standard_user' is able to sign in the system
     Then The inventory page is opened with a list of products 
 
 Scenario: 1.2 'locked_out_user' is not able to sign in the system, when they try, message "Sorry, this user has been locked out" is shown
-    Given 'locked_out_user' added into "Username" input field
+    Given 'locked_out_user' was added into "Username" input field
     When user clicks "LOGIN" button
     Then User should remain on the login page
     And red toaster with a message: "Sorry, this user has been locked out" is seen
