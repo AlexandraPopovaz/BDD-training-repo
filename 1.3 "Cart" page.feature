@@ -1,8 +1,7 @@
 Feature: 1.3 "Cart" page
     Background:
-        Given https://www.saucedemo.com/ was opened
-        And user signed in as Standard User
-        And "Inventory" page is opened
+        Given user signed in as Standard User on https://www.saucedemo.com/
+        And "Inventory" page was opened
 
     Scenario Outline: 1.3.1 The user should be able to add one/several items into the Cart
         When user adds <number> items by clicking on "ADD TO CART" button
