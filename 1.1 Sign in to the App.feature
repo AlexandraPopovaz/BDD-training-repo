@@ -1,7 +1,7 @@
 Feature: 1.1 Sign in to the App
 
 Scenario Outline: Enter username and password
-    Given user on "https://www.saucedemo.com/" page
+    Given the application "https://www.saucedemo.com/" is opened
     And user have entered <Username> to the username field
     And user have entered <Password> to the password field
     When user clicks 'LOGIN'
