@@ -28,7 +28,7 @@ When user presses Select all - Add to Cart button
 Then all items should be added to the cart
 And all items should have Remove button active
 
-Scenario outline: 1.2_04 User should be able to remove one / several  items from the cart
+Scenario Outline: 1.2_04 User should be able to remove one / several  items from the cart
 Given list of items in the Cart with Remove button available
 And the number of items in the cart is 2
 When user presses Remove button of the <item>
