@@ -1,15 +1,16 @@
 Feature 1.2inventory_page_features
 
-background:
-	given: application ''swaglabs'' is opened 
-	and the user logged in with valid user name and password as a problem_user.
+Background:
+	Given application ''swaglabs'' is opened 
+	And the user logged in with valid user name and password as a problem_user
 
-@smoke 
-	scenario outline :1.2.1.1 user should be able to add one/several/all items in the cart using ''inventory''page.
-	when user clicks on ''add to cart button''
-	then user should be able to add <number> <items> into the cart.
+@Smoke 
+	Scenario outline: 1.2.1.1 user should be able to add one/several/all items in the cart using ''inventory''page
+	When user clicks on ''add to cart button''
+	Then user should be able to add <number> <items> into the cart
+	And button of the item should change into ''remove''
 
-examples :
+Examples:
 	|number | item                           |
 	|1      |sauce labs backpack             |
 	|2      |sauce labs bolt T-shirt         |
@@ -18,15 +19,13 @@ examples :
 	|5      |sauce labs fleeve jaket         |
 	|6      |test.allthe things()T-shirt(red)|
 
+@Sanity
+	Scenario outline:1.2.1.2 user should be able to remove one/several/all items from the cart using ''invertory''page
+	Given added <number> of <item> into the cart on the invetory page
+	When user click ''remove'' button from inventory page
+	Then <number> of  <item>removed
 
-
-@sanity
-	scenario outline:1.2.1.2 user should be able to remove one/several/all items from the cart using ''invertory''page.
-	given added <number> of <item> into the cart on the invetory page
-	when user click ''remove'' button from inventory page.
-	then <number> of  <item>removed.
-
-examples :
+Examples:
 	|number | item                           |
 	|1      |sauce labs backpack             |
 	|2      |sauce labs bolt T-shirt         |
