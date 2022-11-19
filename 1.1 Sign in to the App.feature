@@ -13,13 +13,15 @@ Scenario: 1.1_02 a "locked_out_user" should not be able to sign in into the App
 	Given user entered "locked_out_user" in the "Username" input
 	And user entered "secret_sauce" in the "Password" input
 	When user clicks on the "Login" button
-	Then user should not be logged in and should see the error message: "Sorry, this user has been locked out"
+	Then user should not be logged in
+	And should see the error message: "Sorry, this user has been locked out"
 
 Scenario Outline: 1.1_03 User with wrong credentials should not be able to sign in into the App
 	Given user entered <user> in the "Username" input
 	And user entered <password> in the "Password" input
 	When user clicks on the "Login" button
-	Then user should not be logged in and should get an error for the <error>
+	Then user should not be logged in
+	And should get an error for the <error>
 
 Examples:
 	| user            | password       | error                                 |
