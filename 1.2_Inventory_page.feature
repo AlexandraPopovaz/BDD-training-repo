@@ -16,13 +16,13 @@ Scenario Outline: 1.2_01 Add items into Cart
 	And Button of the item should change into "REMOVE"
 
 Examples:
-	| items in the cart | 
-	| 0                 | 
-	| 1                 | 
-	| 2                 | 
-	| 3                 | 
-	| 4                 | 
-	| 5                 | 
+	| items in the cart |
+	| 0                 |
+	| 1                 |
+	| 2                 |
+	| 3                 |
+	| 4                 |
+	| 5                 |
 
 @sanity
 #User should be able to remove one/several/all items into the Cart using "Inventory" page
@@ -32,13 +32,13 @@ Scenario Outline: 1.2_02 Remove items from Cart
 	When User clicks on button "REMOVE" of the item
 	Then Button of the item should change into "ADD TO CART"
 	And User should see number = <items in the cart> - 1 on Cart icon
-	But see no number on Cart icon if <items in the cart>-1==0
+	But User should se no number on Cart icon if <items in the cart>-1==0
 
 Examples:
-	| items in the cart |  
-	| 1                 | 
-	| 2                 | 
-	| 3                 | 
-	| 4                 | 
-	| 5                 | 
-	| 6                 | 
+	| items in the cart |
+	| 1                 |
+	| 2                 |
+	| 3                 |
+	| 4                 |
+	| 5                 |
+	| 6                 |
