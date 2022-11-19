@@ -30,9 +30,9 @@ Scenario Outline: 1.1_03 user should not be able to sign in with invalid passwor
    And pop-up with <error> text should become visible 
 
 Examples:
-    | password                          | error 
-    | any password except "secret_sauce"| "Epic sadface: Username and password do not match any user in this service"
-    | empty                             | "Epic sadface: Password is required"
+   | password                           | error 
+   | any password except "secret_sauce" | "Epic sadface: Username and password do not match any user in this service"
+   | empty                              | "Epic sadface: Password is required"
  
 Scenario Outline: 1.1_04 "Username" field should be case-sensitive 
    Given user entered <user> into "Username" input 
@@ -44,9 +44,9 @@ Scenario Outline: 1.1_04 "Username" field should be case-sensitive
    And pop-up with "Epic sadface: Username and password do not match any user in this service" text should become visible 
    
 Examples:
-    | user            | 
-    | Standard_user   | 
-    | Locked_out_user |   
+   | user            | 
+   | Standard_user   | 
+   | Locked_out_user |   
 
 Scenario Outline: 1.1_05 user should not be able to sign in with empty "Username" input
    Given user left "Username" input empty
@@ -58,10 +58,10 @@ Scenario Outline: 1.1_05 user should not be able to sign in with empty "Username
    And pop-up with "Epic sadface: Username is required" text should become visible 
    
 Examples:
-    | password                           |
-    | any password except "secret_sauce" |
-    | secret_sauce                       |
-    | empty                              |
+   | password                           |
+   | any password except "secret_sauce" |
+   | secret_sauce                       |
+   | empty                              |
 
 
    
