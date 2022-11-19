@@ -33,8 +33,7 @@ Examples:
     | password                          | error 
     | any password except "secret_sauce"| "Epic sadface: Username and password do not match any user in this service"
     | empty                             | "Epic sadface: Password is required"
-
-   
+ 
 Scenario Outline: 1.1_04 "Username" field should be case-sensitive 
    Given user entered <user> into "Username" input 
    And user entered "secret_sauce" into "Password" input
