@@ -48,6 +48,20 @@ Examples:
     | standard_user   | 
     | locked_out_user |
    
+Scenario Outline: 1.1_05 "Username" field should be case-sensitive 
+   Given user entered <user> into "Username" input 
+   And <user> entered "secret_sauce" into "Password" input
+   When <user> clicks on the "Login" button
+   Then <user> should not be able to sign in
+   And "Login" page should remain open 
+   And input fields should be highlighted in red   
+   And pop-up with "Username and password do not match any user in this service" text should become visible 
+   
+Examples:
+    | user            | 
+    | Standard_user   | 
+    | Locked_out_user |   
+   
    
 
    
