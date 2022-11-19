@@ -32,7 +32,7 @@ Scenario Outline: 1.2_02 Remove items from Cart
 	When User clicks on button "REMOVE" of the item
 	Then Button of the item should change into "ADD TO CART"
 	And User should see number = <items in the cart> - 1 on Cart icon
-	But User should se no number on Cart icon if <items in the cart>-1==0
+	But User should see no number on Cart icon if <items in the cart>-1==0
 
 Examples:
 	| items in the cart |
