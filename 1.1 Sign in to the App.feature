@@ -11,7 +11,7 @@ Scenario: 1.1_01 Main scenario: "Standard_user" should be able to sign in into t
     Then "Products page" should become visible
 
 @Regression
-Scenario outline: 1.1_02 Validation of the "Username" input
+Scenario Outline: 1.1_02 Validation of the "Username" input
     When user enters <name> into the "Username" input
     Then <error> text should be visible
 
@@ -23,7 +23,7 @@ Examples:
     |random username|Epic sadface: Username and password do not match any user in this service|
 
 @Regression
-Scenario outline: 1.1_03 Validation of the "Password" input
+Scenario Outline: 1.1_03 Validation of the "Password" input
     When user enters <password> into "password" input
     Then <error> text should be visible
 
@@ -42,7 +42,7 @@ Scenario: 1.1_04 The "locked_out_user" should not be able to sign in into the Ap
     Then "Epic sadface: Sorry, this user has been locked out." text should be visible
 
 @Regression
-Scenario outline: 1.1_05 Validation of the "Username" input with the "locked_out_user"
+Scenario Outline: 1.1_05 Validation of the "Username" input with the "locked_out_user"
     When user enteres <name> into the "Username" input
     Then <error> text should be visible
 
@@ -54,7 +54,7 @@ Examples:
     |random username|Epic sadface: Username and password do not match any user in this service|
 
 @Regression
-Scenario outline: 1.1_06 Validation of the "Password" input with the "locked_out_user"
+Scenario Outline: 1.1_06 Validation of the "Password" input with the "locked_out_user"
     When user enters <password> into "password" input
     Then <error> text should be visible
 
