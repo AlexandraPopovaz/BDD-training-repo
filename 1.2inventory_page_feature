@@ -1,14 +1,14 @@
 Feature 1.2inventory_page_features
 
 Background:
-	Given application ''swaglabs'' is opened 
+	Given application "swaglabs" is opened 
 	And the user logged in with valid user name and password as a problem_user
 
 @Smoke 
-	Scenario outline: 1.2.1.1 user should be able to add one/several/all items in the cart using ''inventory''page
-	When user clicks on ''add to cart button''
+	Scenario outline: 1.2.1.1 user should be able to add one/several/all items in the cart using "inventory page"
+	When user clicks on "add to cart" button
 	Then user should be able to add <number> <items> into the cart
-	And button of the item should change into ''remove''
+	And button of the item should change into "remove"
 
 Examples:
 	|number | item                           |
@@ -20,10 +20,10 @@ Examples:
 	|6      |test.allthe things()T-shirt(red)|
 
 @Sanity
-	Scenario outline:1.2.1.2 user should be able to remove one/several/all items from the cart using ''invertory''page
+	Scenario outline:1.2.1.2 user should be able to remove one/several/all items from the cart using "invertory page"
 	Given added <number> of <item> into the cart on the invetory page
-	When user click ''remove'' button from inventory page
-	Then <number> of  <item>removed
+	When user click "remove" button from inventory page
+	Then <number> of <item> removed
 
 Examples:
 	|number | item                           |
