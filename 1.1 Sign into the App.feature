@@ -39,7 +39,7 @@ Scenario: 1.1_04 Signing into the App with "performance_glitch_user" account
 
 @regression
 Scenario Outline: 1.1_05 Signing into the App with invalid "Username"
-	Given user entered <username> into the "Username" input
+        Given user entered <username> into the "Username" input
 	And user entered "secret_sauce" into "Password" input
 	When user clicks on the "Login" button
 	Then "Login" page should remain opened
@@ -63,6 +63,6 @@ Scenario Outline: 1.1_06 Signing into the App with invalid "Password"
 	And <error> text should be visible
 
 Examples: 
-| password                               | error                                                         |
-| Any password other than "secret_sauce" | "Username and password do not match any user in this service" |
-| empty                                  | "Password is required"                                        |
+        | password                               | error                                                         |
+        | Any password other than "secret_sauce" | "Username and password do not match any user in this service" |
+        | empty                                  | "Password is required"                                        |
