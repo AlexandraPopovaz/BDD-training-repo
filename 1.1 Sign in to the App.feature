@@ -16,11 +16,11 @@ Scenario Outline: 1.1_01 Logging-in to the App with different users
 	And <name> was entered in username field
 	And password "secret_sauce" was entered in password field
 	When press the "Login" button
-	Then <action> should be occur
+	Then <action>
 
 Examples:
 	| name            | action                                                                                 |
-	| standard_user   | The Inventory page should be opened                                                     |
+	| standard_user   | The Inventory page should be opened                                                    |
 	| locked_out_user | The text "Sorry, this user has been locked out" should be able to see on the same page |
 
 @Smoke
