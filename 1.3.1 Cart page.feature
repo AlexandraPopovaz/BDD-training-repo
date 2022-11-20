@@ -4,7 +4,7 @@ Background:
 Given user logged in SwagLabs with valid credentials as a standard_user                                  
                                                                                                          
 @Sanity                                                                                                  
-Scenario Outline: 1.3.1.1 User should be able to add items into the cart and see number of goods in the car
+Scenario Outline: 1.3.1.1 User should be able to add items, and see number of items in the cart 
     Given user went to "Inventory" page                                                                  
     And there were no items in the cart                                                                  
     When user cliks on "Add to cart" button for an <item>                                                
