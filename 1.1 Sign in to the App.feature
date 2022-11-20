@@ -25,8 +25,8 @@ Scenario Outline: 1.1_01 Logging-in to the App with different users
 
 @Smoke
 Scenario: 1.1_02 App functionality is available for standard user
-	   Given 'Standard_User' was logged-in into the App
-       And 'Products' page was opened
-	   And items were put to the cart
-       When click on cart icon
-	   Then chosen items should be in the cart
+		Given 'Standard_User' was logged-in into the App
+		And 'Products' page was opened
+		And items were put to the cart
+		When click on cart icon
+		Then chosen items should be in the cart
