@@ -33,7 +33,7 @@ Scenario Outline: 1.3_02 User should be able to delete items from the cart
     And user should see the number on the icon of the cart button decreased by one                       
      
 Examples:                                                                                                
-    | item.                   |                                                                          
+    | item                    |                                                                          
     | Sauce Labs Backpack     |                                                                          
     | Sauce Labs Bike Light   |                                                                          
     | Sauce Labs Bolt T-Shirt |                                                                          
