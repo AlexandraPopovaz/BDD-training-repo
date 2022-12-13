@@ -1,7 +1,7 @@
 Feature: 1.3 Cart page                                                                                   
                                                                                                          
 Background:                                                                                              
-Given user logged in SwagLabs with valid credentials as a standard_user                                  
+Given user logged in SwagLabs as a standard_user                                  
                                                                                                          
 @Sanity                                                                                                  
 Scenario Outline: 1.3_01 User should be able to add items, and see number of items in the cart 
